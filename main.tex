@@ -1,0 +1,86 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=2cm, right=2cm, top=0.5cm, bottom=2cm]{geometry} % Add margins to main content, keep header full width
+\usepackage{xcolor,graphicx,fontawesome5}
+\usepackage[hidelinks]{hyperref}
+\renewcommand{\baselinestretch}{1.2}
+\usepackage{tikz} % Use TikZ to create a full-width header
+\usepackage{lato} % Use Helvetica font (clean sans-serif)
+\renewcommand{\familydefault}{\sfdefault} % Set sans-serif as the default font
+
+% Custom Colors
+\definecolor{headerbg}{RGB}{210, 235, 255} % Light Blue Background
+\definecolor{headertext}{RGB}{0, 0, 0} % Black Text
+
+\begin{document}
+
+% Full-Width Header Background
+\begin{tikzpicture}[remember picture,overlay]
+    \fill[headerbg] ([yshift=4cm]current page.north west) rectangle ([yshift=-3.5cm]current page.north east);
+\end{tikzpicture}
+
+\noindent
+\begin{minipage}{\textwidth}
+    \raggedright
+    \textbf{\Large \textcolor{headertext}{Kyle Rego}}\\[0.3cm] % Name with spacing
+    \textbf{\textcolor{headertext}{Current role: Loader / Unloader - Hub at UPS and Independent Software Developer}}\\[0.3cm] % Address with spacing
+    \textcolor{headertext}{
+        \href{mailto:regoky@outlook.com}{regoky@outlook.com} \textbullet{}  
+        \href{tel:15088138530}{+1 (508) 813-8530 \textbullet{}}
+        \href{https://github.com/KyleRego}{github.com/KyleRego} \textbullet{} 
+        \href{https://kylerego.net}{kylerego.net}
+    }\\[0.3cm]
+\end{minipage}\\[0.1cm]
+
+% Ensure margins for main content
+\begin{flushleft}
+
+\section*{Work Experience}
+\textbf{Loader / Unloader - Hub} - United Postal Service\\
+\textit{Nov 2024 – Current}
+\begin{itemize}
+    \item Maintained punctuality and readiness for work each day
+    \item Executed strenuous physical tasks safely
+    \item Ensured safe handling of packages throughout the system
+\end{itemize}
+
+\textbf{Software Engineer (Web)} - Impero Software\\
+\textit{June 2022 – Feb 2024}
+\begin{itemize}
+    \item Collaborated across two scrum teams doing Ruby on Rails and ASP.NET Core development, in
+ addition to working in a development support team that addressed production issues in a school
+focused SaaS product
+     \item Resolved support cases, often related to data integrations, by making code changes and updating
+ data using the Rails console
+    \item Designed and implemented district dashboard for seamless user management and permissions, optimizing efficiency for school administrators
+    \item Engineered a support tool to merge duplicate student data securely, enhancing user experience by eliminating duplicates
+    
+\end{itemize}
+
+\section*{Education}
+\textbf{Rensselaer Polytechnic Institute}\
+\textit{Bachelor of Science (4.0) Physics}\\
+\textit{2018}
+
+\section*{Snippets}
+
+\textbf{Larder} - \href{https://larder.lol}{larder.lol}\\
+\textit{React, Bootstrap, ASP.NET Core, EF Core, SQLite, Linux}\\
+\begin{itemize}
+    \item Explored and implemented Controller-Service-Repository architecture in an ASP.NET Core backend and a React/TypeScript frontend to enforce separation of concerns
+    \item Developed unit tests for services and repositories and Selenium UI tests to ensure maintainability and reliability
+ 
+ \end{itemize}
+
+\textbf{Anki Books} - \href{https://ankibooks.io}{ankibooks.io}\\
+\textit{Ruby on Rails, Bootstrap, PostgreSQL, SQLite, Linux}\\
+\begin{itemize}
+    \item Developed Anki Record, a Ruby gem that provides an API for creating Anki deck packages (.apkg files), which are ZIP archives containing SQLite databases formatted to Anki’s schema
+    \item Engineered a Rails 7 backend to support Anki deck management, integrating with Anki Record to create downloadable .apkg files from the user's Anki Books data
+    \item Designed a comprehensive test suite using RSpec for unit tests and Cucumber/Selenium/Capybara for end-to-end UI testing, ensuring robust and maintainable code
+ 
+ \end{itemize}
+
+
+\end{flushleft}
+
+\end{document}
